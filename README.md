@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Intro to React and Props
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+``` Today we will be learning about what react is and talking about what props are. By the end of this live session you should have a basic understanding of how react works and what props are. ```
 
-## Available Scripts
+## Quick Config: 
+---
 
-In the project directory, you can run:
+     $ npm install -g create-react-app
+     $ create-react-app < APP-NAME >  
 
-### `yarn start`
+# What is React?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React is a library for javascript to build UIs.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ =====> **[documentation](https://reactjs.org/)** <=====
 
-### `yarn test`
+**```This library is constantly changing! Reading documentation is extremely important!```**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React is a Node Library that is component based
 
-### `yarn build`
+_```What does that mean?```_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![First Example](https://www.droptica.com/sites/droptica.com/files/inline-images/components%20image-03.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+--- 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Second Example](https://kinsta.com/wp-content/uploads/2020/08/common-website-layout.jpg)
 
-### `yarn eject`
+--- 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+React allows us to create Single Page Applications (SPAs) easily and smoothly.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```Tools that React uses to help us build these smooth JS SPAs```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Uses JSX (lets us do HTML in our JS Files compiles into native js)
+    1. https://babeljs.io/
+    1. https://webpack.js.org/
+    1. Auto Refreshes!!!
+    1. Can Import!!!
+1. File Structure
+    1. _`public`_ Folder
+        1. typically don't touch
+        1. `manifest.json`
+        1. `robots.txt`
+        1. _`index.html`_
+            1. **Note on styling**
+                1. https://react-bootstrap.github.io/
+                1. https://material-ui.com/
+                1. https://tailwindcss.com/
+                1. CSS you should style specific components rather than one big sytyle
+        1. `src` Folder
+            1. Where our project lives
+                1. _You might see issues with trying to import files outside of src folder_
+            1. `index.js`
+                1. https://reactjs.org/docs/faq-internals.html#:~:text=The%20virtual%20DOM%20(VDOM)%20is,This%20process%20is%20called%20reconciliation.
+                1. https://reactjs.org/docs/strict-mode.html
+            1. `App.js`
+                1. The head of our node Tree
+## Using Components
+<ol>
+    <li>Take a look at our App JS</li>
+    <li>Using JSX In React</li>
+        <ol>
+            <li style='color: red'> Must close all tags.</li>
+            <li style='color: red'>Cannot have siblings</li>
+            <li style='color: green'> Can have fragments (React.Fragment)</li>
+        </ol>
+    <li>Create a Header Component</li>
+    <li> Tackle functional and then class components </li>
+</ol>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Code A Basic Blogger App
+    Header w/ Props -> Class Coponent & Functional Component -> Practice Content

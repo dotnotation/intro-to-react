@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header"
+
 
 function App() {
+  const colors = ['blue','pink','yellow']
+  const mappedHeaders = colors.map((color) => {return <Header color={color} title="Goodbye World!" />} )
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        {/* MAPPED */}
+        {/* [Header COMPonent, Header , Header, Header] */}
+        {mappedHeaders}
+        
+        
+        
+        {/* <Header color="red" title="Goodbye World!" />
+        <Header color="blue" title="Goodmorning" />
+        <Header color="yellow" title="eri" />
+        <Header color="pink" title="pinkish" /> */}
+        
+        {/* Abstracted away the some magic from react */}
+        {/* { new Header({color: "blue", title: "Weird way of doing it"}).render()} */}
+        {/* {Header({color: "blue", title: "Weird way of doing it"})} */}
+      </div>
   );
 }
 
