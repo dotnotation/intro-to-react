@@ -1,17 +1,16 @@
-import React from "react";
+import {Component} from "react";
 import Header from "./components/Header"
 
-
-function App() {
-  const colors = ['blue','pink','yellow']
-  const mappedHeaders = colors.map((color) => {return <Header color={color} title="Hi World!" />} )
-
-
-  return (
-      <div className="App">
-        {mappedHeaders}
-      </div>
-  );
+class App extends Component{
+  
+  
+  render(){
+    return (
+        <div className="App">
+          <Header color="blue" title="CLICK ME!"/>
+        </div>
+    )
+  };
 }
 
 export default App;

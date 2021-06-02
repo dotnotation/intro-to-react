@@ -1,18 +1,5 @@
 import React from 'react'
-
-// function Header(props){
-
-//     return(
-//         //JSX
-//         <h1 style={{color: props.color}}>
-//             {props.title}
-//         </h1>
-//     )
-// }
-
 class Header extends React.Component{
-
-
     render(){
         return(
             <h1 style={{color: this.props.color}}>
@@ -21,11 +8,5 @@ class Header extends React.Component{
         )
     }    
 }
-
-// Default Props 
-
-// Header.defaultProps = {
-//     title: "Eri"
-// }
 
 export default Header;
