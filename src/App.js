@@ -1,30 +1,26 @@
-import React from "react";
+import {Component} from "react";
 import Header from "./components/Header"
+import List from "./containers/List"
 
+class App extends Component{
+  state = {
+    color: "blue",
+  }
 
-function App() {
-  const colors = ['blue','pink','yellow']
-  const mappedHeaders = colors.map((color) => {return <Header color={color} title="Goodbye World!" />} )
-
-
-  return (
-      <div className="App">
-        {/* MAPPED */}
-        {/* [Header COMPonent, Header , Header, Header] */}
-        {mappedHeaders}
-        
-        
-        
-        {/* <Header color="red" title="Goodbye World!" />
-        <Header color="blue" title="Goodmorning" />
-        <Header color="yellow" title="eri" />
-        <Header color="pink" title="pinkish" /> */}
-        
-        {/* Abstracted away the some magic from react */}
-        {/* { new Header({color: "blue", title: "Weird way of doing it"}).render()} */}
-        {/* {Header({color: "blue", title: "Weird way of doing it"})} */}
-      </div>
-  );
+  parentClick = () => {
+    this.setState({
+      color: this.state.color === "blue" ? "red" : "blue"
+    }, () => console.log(this.state))
+  }
+  
+  render(){
+    return (
+        <div className="App">
+          <Header parentClick={this.parentClick} color={this.state.color}/>
+          <List color={this.state.color}/>
+        </div>
+    )
+  };
 }
 
 export default App;
