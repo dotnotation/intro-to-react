@@ -1,4 +1,19 @@
-# Intro to React and Props
+# React State and Events Resources - June 2nd, 2021
+
+<strong>Resources from Lecture</strong>
+<ul>
+    <li>
+        <a href="https://reactjs.org/docs/events.html">Events In React</a>
+    </li>
+    <li>
+        <a href="https://reactjs.org/docs/legacy-event-pooling.html">Event Pooling</a>
+    </li>
+    <li>
+        <a href="https://reactjs.org/docs/react-component.html#setstate">Set State</a>
+    </li>
+</ul>
+
+# Intro to React and Props - June 1st, 2021
 
 ``` Today we will be learning about what react is and talking about what props are. By the end of this live session you should have a basic understanding of how react works and what props are. ```
 
