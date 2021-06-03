@@ -1,23 +1,28 @@
 import {Component} from "react";
 import Header from "./components/Header"
 import List from "./containers/List"
+import Form from "./components/Form"
 
 class App extends Component{
   state = {
-    color: "blue",
+    blogs: []
   }
 
-  parentClick = () => {
-    this.setState({
-      color: this.state.color === "blue" ? "red" : "blue"
-    }, () => console.log(this.state))
+  addBlog = (blog) => {
+    this.state.blog = ['badstate']
+    this.setState((prevState, prevProps) => {
+      //blogs: this.state.blogs.push(blog) <= Bad 
+      return { 
+        blogs: [...prevState.blogs, blog]
+      }
+    })
   }
-  
+
   render(){
     return (
         <div className="App">
-          <Header parentClick={this.parentClick} color={this.state.color}/>
-          <List color={this.state.color}/>
+          <Form addBlog={this.addBlog}/>
+          <List blogs={this.state.blogs} />
         </div>
     )
   };
